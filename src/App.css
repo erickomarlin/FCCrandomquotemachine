@@ -1,0 +1,40 @@
+.background {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+#quote-box {
+  width: 500px;
+  margin: 0 auto;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: white;
+  color: linen;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+#author {
+  text-align: right;
+}
+
+button,
+a {
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+}
+
+button {
+  padding-top: 11px;
+}
