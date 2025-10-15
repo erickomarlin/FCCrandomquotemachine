@@ -12,7 +12,7 @@ const getRandomQuote = (): Quote => {
   return quotes[Math.floor(Math.random() * quotes.length)];
 };
 
-const getRandomColor = (): String => {
+const getRandomColor = (): string => {
   const red = Math.floor(Math.random() * 125);
   const green = Math.floor(Math.random() * 125);
   const blue = Math.floor(Math.random() * 125);
@@ -24,8 +24,9 @@ function App() {
   const [quote, setQuote] = useState<Quote>(getRandomQuote());
   const [randomColor, setRandomColor] = useState<string>(getRandomColor());
 
-  const changeQuote = () => {
+  const changeQuoteAndColor = () => {
     setQuote(getRandomQuote);
+    setRandomColor(getRandomColor);
   };
 
   return (
@@ -44,7 +45,7 @@ function App() {
           <a href="twitter.com/intent/tweet" id="tweet-quote" target="_blank" style={{ backgroundColor: randomColor }}>
             <FaTwitter color="white" style={{ backgroundColor: randomColor }}></FaTwitter>
           </a>
-          <button id="new-quote" onClick={changeQuote} style={{ backgroundColor: randomColor }}>
+          <button id="new-quote" onClick={changeQuoteAndColor} style={{ backgroundColor: randomColor }}>
             Change Quote
           </button>
         </div>
